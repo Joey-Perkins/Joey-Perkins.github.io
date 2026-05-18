@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shepherd Signals Professional — Mentions Légales & CGV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a0e1a;
+      --navy2: #0f1628;
+      --blue-dark: #111e3a;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --cyan: #4fc3e8;
+      --white: #f0f4ff;
+      --gray: #8a9bc0;
+      --border: rgba(201,168,76,0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--navy);
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND STARS ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 45%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 70%, rgba(255,255,255,0.2) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 60px 20px 50px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(79,195,232,0.05) 0%, transparent 100%);
+      z-index: 1;
+    }
+
+    .logo-ring {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%);
+      box-shadow: 0 0 30px rgba(201,168,76,0.2);
+      font-size: 32px;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header h1 span {
+      color: var(--gold);
+    }
+
+    header p {
+      color: var(--gray);
+      font-size: 0.85rem;
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+
+    /* ── NAV TABS ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,14,26,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    nav a {
+      color: var(--gray);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 16px 22px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 70px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.3s; }
+    .section:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(79,195,232,0.1));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── ARTICLE ── */
+    .article {
+      margin-bottom: 28px;
+      padding: 24px 28px;
+      background: rgba(15,22,40,0.6);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+    }
+
+    .article h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .article p, .article li {
+      color: #b8c8e8;
+      font-size: 0.93rem;
+      line-height: 1.9;
+    }
+
+    .article ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .article ul li {
+      margin-bottom: 6px;
+      position: relative;
+    }
+
+    .article ul li::marker {
+      color: var(--gold);
+    }
+
+    /* ── LICENCE TABLE ── */
+    .licence-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.88rem;
+    }
+
+    .licence-table th {
+      background: rgba(201,168,76,0.1);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .licence-table td {
+      padding: 12px 16px;
+      color: #b8c8e8;
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+    }
+
+    .licence-table tr:last-child td { border-bottom: none; }
+    .licence-table tr:hover td { background: rgba(79,195,232,0.04); }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-demo { background: rgba(79,195,232,0.15); color: var(--cyan); border: 1px solid rgba(79,195,232,0.3); }
+    .badge-starter { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+    .badge-premium { background: rgba(150,100,255,0.12); color: #b8a0ff; border: 1px solid rgba(150,100,255,0.3); }
+    .badge-ultimate { background: rgba(255,150,50,0.12); color: #ffb070; border: 1px solid rgba(255,150,50,0.3); }
+    .badge-infinity { background: rgba(255,255,255,0.08); color: #e0e8ff; border: 1px solid rgba(255,255,255,0.2); }
+
+    /* ── CONTACT BOX ── */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(79,195,232,0.05));
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #b8c8e8;
+      font-size: 0.9rem;
+    }
+
+    .contact-item span:first-child {
+      font-size: 20px;
+    }
+
+    .contact-item a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--gray);
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 10px 0 30px;
+      opacity: 0.3;
+    }
+
+    /* ── HIGHLIGHT ── */
+    .highlight {
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    /* ── UPDATE DATE ── */
+    .update-date {
+      display: inline-block;
+      background: rgba(79,195,232,0.1);
+      border: 1px solid rgba(79,195,232,0.2);
+      color: var(--cyan);
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-ring">🧭</div>
+  <h1>Shepherd Signals <span>Professional</span></h1>
+  <p>Expert Advisor MQL5 — Documents Légaux Officiels</p>
+  <div class="update-date">Dernière mise à jour : Mai 2026</div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#cgv">CGV</a>
+  <a href="#mentions">Mentions Légales</a>
+  <a href="#confidentialite">Confidentialité</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+  <!-- ══════════════════════════════ CGV ══════════════════════════════ -->
+  <div class="section" id="cgv">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <div>
+        <div class="section-title">Conditions Générales de Vente</div>
+      </div>
+    </div>
+
+    <div class="article">
+      <h3>Article 1 — Objet</h3>
+      <p>Les présentes Conditions Générales de Vente régissent la vente de licences d'utilisation du logiciel <span class="highlight">Shepherd Signals Professional</span>, Expert Advisor (EA) pour la plateforme MetaTrader 5. Toute commande implique l'acceptation pleine et entière des présentes CGV.</p>
+    </div>
+
+    <div class="article">
+      <h3>Article 2 — Produits proposés</h3>
+      <p>Shepherd Signals Professional est un Expert Advisor MQL5 permettant l'automatisation de la diffusion de signaux de trading vers Telegram, la capture d'écran automatique et la gestion du risque en temps réel.</p>
+    </div>
+
+    <div class="article">
+      <h3>Article 3 — Licences et tarifs</h3>
+      <p>Les licences disponibles sont les suivantes :</p>
+      <table class="licence-table">
+        <thead>
+          <tr>
+            <th>Licence</th>
+            <th>Durée</th>
+            <th>Prix standard</th>
+            <th>Prix IB Exness*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-demo">DEMO</span></td>
+            <td>10 jours</td>
+            <td>Gratuit</td>
+            <td>Gratuit</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-starter">STARTER</span></td>
+            <td>30 jours</td>
+            <td>17 $</td>
+            <td>8.50 $</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-premium">PREMIUM</span></td>
+            <td>90 jours</td>
+            <td>40 $</td>
+            <td>20 $</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-ultimate">ULTIMATE</span></td>
+            <td>365 jours</td>
+            <td>135 $</td>
+            <td>67.50 $</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-infinity">INFINITY</span></td>
+            <td>À vie</td>
+            <td>199 $</td>
+            <td>99.50 $</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px; font-size:0.82rem; color: var(--gray);">* Réduction de 50% applicable aux clients ayant ouvert un compte de trading actif sur Exness via le lien de partenariat officiel Shepherd Signals Pro.</p>
+    </div>
+
+    <div class="article">
+      <h3>Article 4 — Commande et paiement</h3>
+      <ul>
+        <li>Les commandes sont passées via le bot Telegram officiel <span class="highlight">@ShepherdSignals_Bot</span></li>
+        <li>Les paiements sont traités par <span class="highlight">CamerPay</span> (Orange Money, MTN MoMo, Visa, Mastercard, PayPal)</li>
+        <li>La transaction est sécurisée et chiffrée</li>
+        <li>Le paiement est dû intégralement au moment de la commande</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Article 5 — Livraison</h3>
+      <ul>
+        <li>La clé de licence est délivrée <span class="highlight">automatiquement</span> par le bot Telegram dans les <span class="highlight">5 minutes</span> suivant la confirmation du paiement</li>
+        <li>En cas de problème technique, la livraison manuelle est garantie sous <span class="highlight">24 heures ouvrées</span></li>
+        <li>La clé est liée à l'adresse email fournie lors de la commande</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Article 6 — Politique de remboursement</h3>
+      <ul>
+        <li>Les licences étant des biens numériques activés immédiatement, <span class="highlight">aucun remboursement</span> n'est accordé après activation de la clé</li>
+        <li>En cas de non-livraison de la clé sous 24 heures, un remboursement intégral est effectué</li>
+        <li>En cas de bug critique empêchant tout fonctionnement, un remplacement de licence est offert</li>
+        <li>Tout litige doit être signalé à <span class="highlight">lesbonnesaffaires2025@gmail.com</span> dans les 7 jours suivant l'achat</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Article 7 — Droit d'utilisation</h3>
+      <ul>
+        <li>La licence est accordée à titre personnel, non cessible et non transférable</li>
+        <li>Il est interdit de partager, revendre ou redistribuer la clé de licence</li>
+        <li>L'EA ne peut être utilisé que sur les comptes de trading du détenteur de la licence</li>
+        <li>Toute tentative de contournement du système de licence entraîne la révocation immédiate sans remboursement</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Article 8 — Limitation de responsabilité</h3>
+      <p>Shepherd Signals Professional est un outil d'assistance au trading. <span class="highlight">Le trading de devises et de CFD comporte des risques importants de perte en capital.</span> Le vendeur ne saurait être tenu responsable des pertes financières subies lors de l'utilisation de l'EA. Les performances passées ne préjugent pas des performances futures.</p>
+    </div>
+
+    <div class="article">
+      <h3>Article 9 — Droit applicable</h3>
+      <p>Les présentes CGV sont régies par le droit camerounais. Tout litige non résolu à l'amiable sera soumis aux tribunaux compétents de Douala, Cameroun.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════ MENTIONS LÉGALES ══════════════════════════════ -->
+  <div class="section" id="mentions">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <div>
+        <div class="section-title">Mentions Légales</div>
+      </div>
+    </div>
+
+    <div class="article">
+      <h3>Éditeur du service</h3>
+      <ul>
+        <li><span class="highlight">Nom commercial :</span> Shepherd Signals Professional</li>
+        <li><span class="highlight">Responsable :</span> DJOMOL Joseph</li>
+        <li><span class="highlight">Statut :</span> Freelancer — Particulier</li>
+        <li><span class="highlight">Pays :</span> Cameroun</li>
+        <li><span class="highlight">Ville :</span> Douala</li>
+        <li><span class="highlight">Email :</span> lesbonnesaffaires2025@gmail.com</li>
+        <li><span class="highlight">Canal Telegram :</span> @ShepherdSignalsProfessional</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Hébergement</h3>
+      <ul>
+        <li><span class="highlight">Site web :</span> GitHub Pages — github.com</li>
+        <li><span class="highlight">Bot Telegram :</span> Render — render.com</li>
+        <li><span class="highlight">Base de données licences :</span> Google Sheets — Google LLC</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Propriété intellectuelle</h3>
+      <p>L'ensemble des éléments constituant le logiciel Shepherd Signals Professional (code source, visuels, nom, logo, documentation) sont la propriété exclusive de DJOMOL Joseph. Toute reproduction, même partielle, est strictement interdite sans autorisation écrite préalable.</p>
+    </div>
+
+    <div class="article">
+      <h3>Avertissement risques financiers</h3>
+      <p>Le trading sur les marchés financiers (Forex, CFD, crypto) implique un risque élevé de perte en capital. Les outils fournis par Shepherd Signals Professional sont des outils d'assistance et ne constituent en aucun cas un conseil en investissement. Vous tradez sous votre entière responsabilité.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════ CONFIDENTIALITÉ ══════════════════════════════ -->
+  <div class="section" id="confidentialite">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <div>
+        <div class="section-title">Politique de Confidentialité</div>
+      </div>
+    </div>
+
+    <div class="article">
+      <h3>Données collectées</h3>
+      <p>Lors de l'utilisation du bot Telegram et du processus d'achat, les données suivantes sont collectées :</p>
+      <ul>
+        <li>Prénom, nom et pseudo Telegram</li>
+        <li>Adresse email (fournie volontairement lors de la commande)</li>
+        <li>Identifiant Telegram (Chat ID)</li>
+        <li>Type de licence achetée</li>
+        <li>Informations de transaction (montant, devise, ID de transaction)</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Finalité du traitement</h3>
+      <p>Les données collectées sont utilisées exclusivement pour :</p>
+      <ul>
+        <li>Générer et délivrer la clé de licence</li>
+        <li>Assurer le support technique</li>
+        <li>Prévenir la fraude et les abus</li>
+        <li>Gérer les renouvellements de licence</li>
+      </ul>
+      <p style="margin-top:10px;"><span class="highlight">Vos données ne sont jamais revendues, partagées ou transmises à des tiers</span> à des fins commerciales.</p>
+    </div>
+
+    <div class="article">
+      <h3>Stockage et sécurité</h3>
+      <ul>
+        <li>Les données sont stockées sur <span class="highlight">Google Sheets</span> (serveurs Google, sécurisés)</li>
+        <li>Les transactions sont traitées par <span class="highlight">CamerPay</span> (chiffrement AES-256)</li>
+        <li>Aucune donnée de carte bancaire n'est stockée par nos soins</li>
+        <li>Les données sont conservées pendant la durée de validité de la licence + 1 an</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h3>Vos droits</h3>
+      <p>Conformément à la loi camerounaise n° 2010/012 du 21 décembre 2010, vous disposez des droits suivants :</p>
+      <ul>
+        <li><span class="highlight">Droit d'accès</span> : consulter les données vous concernant</li>
+        <li><span class="highlight">Droit de rectification</span> : corriger des données inexactes</li>
+        <li><span class="highlight">Droit de suppression</span> : demander l'effacement de vos données</li>
+      </ul>
+      <p style="margin-top:10px;">Pour exercer ces droits, contactez : <span class="highlight">lesbonnesaffaires2025@gmail.com</span></p>
+    </div>
+
+    <div class="article">
+      <h3>Cookies</h3>
+      <p>Ce site web n'utilise aucun cookie de suivi ou de publicité. GitHub Pages peut collecter des données techniques anonymes (logs de connexion) dans le cadre normal de son service d'hébergement.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════ CONTACT ══════════════════════════════ -->
+  <div class="section" id="contact">
+    <div class="section-header">
+      <div class="section-icon">📡</div>
+      <div>
+        <div class="section-title">Contact & Support</div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-item">
+        <span>📧</span>
+        <div>
+          <div style="color:var(--gray);font-size:0.75rem;margin-bottom:2px;">Email support</div>
+          <a href="mailto:lesbonnesaffaires2025@gmail.com">lesbonnesaffaires2025@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span>📢</span>
+        <div>
+          <div style="color:var(--gray);font-size:0.75rem;margin-bottom:2px;">Canal Telegram</div>
+          <a href="https://t.me/ShepherdSignalsProfessional" target="_blank">@ShepherdSignalsProfessional</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span>🤖</span>
+        <div>
+          <div style="color:var(--gray);font-size:0.75rem;margin-bottom:2px;">Bot officiel</div>
+          <a href="https://t.me/ShepherdSignals_Bot" target="_blank">@ShepherdSignals_Bot</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span>🕒</span>
+        <div>
+          <div style="color:var(--gray);font-size:0.75rem;margin-bottom:2px;">Horaires support</div>
+          <span>Lun–Ven, 9h–18h GMT+1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>Shepherd Signals Professional</span> — DJOMOL Joseph — Douala, Cameroun</p>
+  <p style="margin-top:6px;">Tous droits réservés · <a href="#cgv" style="color:var(--gray);text-decoration:none;">CGV</a> · <a href="#mentions" style="color:var(--gray);text-decoration:none;">Mentions légales</a> · <a href="#confidentialite" style="color:var(--gray);text-decoration:none;">Confidentialité</a></p>
+</footer>
+
+</body>
+</html>
